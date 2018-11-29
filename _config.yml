@@ -4,7 +4,7 @@ tagline:      恪守忠诚，血性担当 敢为人先，勇于创新
 
 baseurl:      ""
 paginate:     1
-
+permalink: /:categories/:year/:month/:title:output_ext
 # About/contact
 author:
   name: cuiliyan
