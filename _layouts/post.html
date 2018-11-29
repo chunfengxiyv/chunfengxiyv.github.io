@@ -2,6 +2,6 @@
 layout: default
 ---
 <h2>{{ page.title }}</h2>
-<p class="meta" style="text-align: right;">{{ page.date }} {{ page.author }}</p>
+<p class="meta" style="text-align: right;">{{ page.date | date: "%Y-%m-%d" }} {{ page.author }}</p>
 
 {{ content }}
