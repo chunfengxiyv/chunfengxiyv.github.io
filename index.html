@@ -8,7 +8,7 @@ title: {{ site.name }}
 <h2>{{ category | first }}</h2>
 <ul class="arc-list">
     {% for post in category.last %}
-        <li>{{ post.date | date_to_string}} &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.url | last}}{{ post.title }}</a></li>
+        <li>{{ post.date | date: "%Y-%m-%d" }} &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.url | last}}{{ post.title }}</a></li>
     {% endfor %}
 </ul>
 {% endfor %}
