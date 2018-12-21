@@ -1,0 +1,26 @@
+---
+layout: default
+title: {{ site.name }}
+---
+
+<div id="home">
+{% for category in site.categories %}
+
+<div id="{{ category | first }}">
+<h2>{{ category | first }}</h2>
+    {% for post in category.last %}
+        <li>{{ post.date | date: "%Y-%m-%d" }} &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.url | last}}{{ post.title }}</a></li>
+    {% endfor %}
+    
+</div>
+{% endfor %}
+</div>
+<script type="text/javascript">
+	
+var category={"ptb":["报纸","a.svg"],"a":["栏目1","b.svg"],"b":["栏目2","b.svg"]};
+[].forEach.call(document.getElementsByTagName('h2'),function(e){
+	if(category[e.innerText])
+		e.innerHTML=category[e.innerText][0]
+});
+
+</script>
