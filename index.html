@@ -5,7 +5,7 @@ title: {{ site.name }}
 
 <div id="home">
 {% for category in site.categories %}
-<div>{{ category | first }}</div>
+<a>{{ category | first }}</a>
 <!--     {% for post in category.last %}
         <li>{{ post.date | date: "%Y-%m-%d" }} &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.url | last}}{{ post.title }}</a></li>
     {% endfor %} -->
@@ -18,8 +18,8 @@ title: {{ site.name }}
 </ul>
 <script type="text/javascript">
 	
-var category={"ptb":["报纸","a.svg"],"b":["栏目1","b.svg"]};
-[].forEach.call(document.getElementsByTagName('div'),function(e){
+var category={"ptb":["报纸","a.svg"],"a":["栏目1","b.svg"],"b":["栏目2","b.svg"]};
+[].forEach.call(document.getElementsByTagName('a'),function(e){
 	if(category[e.innerText])
 		e.innerHTML="<img src='/"+category[e.innerText][1]+"' /><br>"+category[e.innerText][0]
 });
