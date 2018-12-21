@@ -1,11 +1,10 @@
-
 #home div img{
-	    width: 2em;
+	width: 5em;
 }
 #home div{
 	text-align: center;
-    width: 3em;
-        display: inline-block;
+    width: 6em;
+    display: inline-block;
 }
 #home{
 	text-align: center;
