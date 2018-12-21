@@ -3,15 +3,15 @@ layout: default
 title: {{ site.name }}
 ---
 
-<div id="home">
+<div id="home2">
 {% for category in site.categories %}
 
-<div id="{{ category | first }}">
+<div id="{{ category | first }}" style="display: none;">
 <h2>{{ category | first }}</h2>
     {% for post in category.last %}
         <li>{{ post.date | date: "%Y-%m-%d" }} &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.url | last}}{{ post.title }}</a></li>
     {% endfor %}
-    
+
 </div>
 {% endfor %}
 </div>
@@ -22,5 +22,5 @@ var category={"ptb":["报纸","a.svg"],"a":["栏目1","b.svg"],"b":["栏目2","b
 	if(category[e.innerText])
 		e.innerHTML=category[e.innerText][0]
 });
-
+document.getElementById(document.URL.split("#")[1]).style.display=""
 </script>
