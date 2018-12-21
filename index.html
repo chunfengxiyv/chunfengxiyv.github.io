@@ -5,7 +5,7 @@ title: {{ site.name }}
 
 <div id="home">
 {% for category in site.categories %}
-<h2>{{ category | first }}</h2>
+<div>{{ category | first }}</div>
 <ul class="arc-list">
 <!--     {% for post in category.last %}
         <li>{{ post.date | date: "%Y-%m-%d" }} &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.url | last}}{{ post.title }}</a></li>
@@ -15,15 +15,16 @@ title: {{ site.name }}
 
 <ul class="arc-list">
     {% for post in site.posts %}
-        <i>{{ post.category }}</i><li>{{ post.date | date: "%Y-%m-%d" }} &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.url | last}}{{ post.title }}</a></li>
+        <li>{{ post.date | date: "%Y-%m-%d" }} &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.url | last}}{{ post.title }}</a></li>
     {% endfor %}
 </ul>
 </div>
 <script type="text/javascript">
 	
 var category={"ptb":["报纸","a.svg"],"b":["栏目1","b.svg"]};
-[].forEach.call(document.getElementsByTagName('h2'),function(e){
-	if(category[e.innerText])e.innerHTML=category[e.innerText][0]+"<img src='/"+category[e.innerText][1]+"' />"
+[].forEach.call(document.getElementsByTagName('div'),function(e){
+	if(category[e.innerText])
+		e.innerHTML="<img src='/"+category[e.innerText][1]+"' /><br>"+category[e.innerText][0]
 });
 
 </script>
