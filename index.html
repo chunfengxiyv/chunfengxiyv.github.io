@@ -16,18 +16,20 @@ title: {{ site.name }}
 <h2>全部</h2>
 <ul class="arc-list">
     {% for post in site.posts %}
-        <li>{{ post.category }}</li><li>{{ post.date | date: "%Y-%m-%d" }} &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.url | last}}{{ post.title }}</a></li>
+        replace_name({{ post.category }})<li>{{ post.date | date: "%Y-%m-%d" }} &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.url | last}}{{ post.title }}</a></li>
     {% endfor %}
 </ul>
 </div>
 <script type="text/javascript">
 	
-var category={"ptb":"报纸","b":"栏目1"};
+var category={"ptb":"报纸","b":"栏目a"};
 [].forEach.call(document.getElementsByTagName('h2'),function(e){
 	if(category[e.innerText])e.innerText=category[e.innerText]
 });
-[].forEach.call(document.getElementsByTagName('li'),function(e){
-	if(category[e.innerText])e.innerText=category[e.innerText]
-})
+function replace_name(s){
+	if(category[s])
+		return category[s]
+	return s
+}
 
 </script>
