@@ -2,6 +2,14 @@
 #home div img{
 	    width: 2em;
 }
+#home div{
+	text-align: center;
+    width: 3em;
+        display: inline-block;
+}
+#home{
+	text-align: center;
+}
 .main-content img{
     width: 100%;
 }

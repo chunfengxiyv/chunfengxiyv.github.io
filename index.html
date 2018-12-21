@@ -10,13 +10,12 @@ title: {{ site.name }}
         <li>{{ post.date | date: "%Y-%m-%d" }} &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.url | last}}{{ post.title }}</a></li>
     {% endfor %} -->
 {% endfor %}
-
+</div>
 <ul class="arc-list">
     {% for post in site.posts %}
         <li>{{ post.date | date: "%Y-%m-%d" }} &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.url | last}}{{ post.title }}</a></li>
     {% endfor %}
 </ul>
-</div>
 <script type="text/javascript">
 	
 var category={"ptb":["报纸","a.svg"],"b":["栏目1","b.svg"]};
