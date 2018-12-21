@@ -6,11 +6,9 @@ title: {{ site.name }}
 <div id="home">
 {% for category in site.categories %}
 <div>{{ category | first }}</div>
-<ul class="arc-list">
 <!--     {% for post in category.last %}
         <li>{{ post.date | date: "%Y-%m-%d" }} &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.url | last}}{{ post.title }}</a></li>
     {% endfor %} -->
-</ul>
 {% endfor %}
 
 <ul class="arc-list">
