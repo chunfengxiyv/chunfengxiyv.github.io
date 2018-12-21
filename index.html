@@ -7,29 +7,23 @@ title: {{ site.name }}
 {% for category in site.categories %}
 <h2>{{ category | first }}</h2>
 <ul class="arc-list">
-    {% for post in category.last %}
+<!--     {% for post in category.last %}
         <li>{{ post.date | date: "%Y-%m-%d" }} &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.url | last}}{{ post.title }}</a></li>
-    {% endfor %}
+    {% endfor %} -->
 </ul>
 {% endfor %}
 
-<h2>全部</h2>
 <ul class="arc-list">
     {% for post in site.posts %}
-        replace_name({{ post.category }})<li>{{ post.date | date: "%Y-%m-%d" }} &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.url | last}}{{ post.title }}</a></li>
+        <i>{{ post.category }}</i><li>{{ post.date | date: "%Y-%m-%d" }} &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.url | last}}{{ post.title }}</a></li>
     {% endfor %}
 </ul>
 </div>
 <script type="text/javascript">
 	
-var category={"ptb":"报纸","b":"栏目a"};
+var category={"ptb":["报纸","a.svg"],"b":["栏目1","b.svg"]};
 [].forEach.call(document.getElementsByTagName('h2'),function(e){
-	if(category[e.innerText])e.innerText=category[e.innerText]
+	if(category[e.innerText])e.innerHTML=category[e.innerText][0]+"<img src='/"+category[e.innerText][1]+"' />"
 });
-function replace_name(s){
-	if(category[s])
-		return category[s]
-	return s
-}
 
 </script>
