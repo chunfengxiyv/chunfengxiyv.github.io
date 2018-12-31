@@ -141,6 +141,9 @@ a:hover { text-decoration: underline; }
 
 .page-header { color: #fff; text-align: center; background-color: #d53415; background-image: url(/img/bg.jpg); background-repeat: no-repeat;background-position:center;background-size: 100% 100%;background-blend-mode: overlay;}
 @media screen and (min-width: 64em) { .page-header { padding: 5rem 6rem; } }
+.page-header h1 {
+    color: rgba(233, 255, 0, 0.93);
+}
 @media screen and (min-width: 42em) and (max-width: 64em) { .page-header { padding: 3rem 4rem; } }
 @media screen and (max-width: 42em) { .page-header { padding: 2rem 1rem; } }
 
