@@ -1,9 +1,10 @@
 #home a img{
-	width: 5em;
+	width: 4em;
 }
 #home a{
 	text-align: center;
-    width: 6em;
+    width: 5em;
+        font-size: 0.9em;
     display: inline-block;
     color: #000;
 }
