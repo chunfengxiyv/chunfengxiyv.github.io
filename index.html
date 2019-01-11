@@ -22,7 +22,7 @@ var category={"dsjs":["党史军史"],"fdsk":["辅导授课"],"thgw":["体会感
 "wzts":["文章推送"],"xzdt":["小组动态"],"zyls":["重要论述"],"zxdt":["主席动态"]};
 var i=0;
 [].forEach.call(document.getElementsByTagName('a'),function(e){
-	if(category[e.innerText])/{
+	if(category[e.innerText]){
 		i++
 		if (i=4)
 			e.parentElement.innerHTML+="<br>"
