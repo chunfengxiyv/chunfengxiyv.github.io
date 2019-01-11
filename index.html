@@ -18,10 +18,11 @@ title: {{ site.name }}
 </ul>
 <script type="text/javascript">
 	
-var category={"ptb":["报纸","a.svg"],"a":["栏目1","b.svg"],"b":["栏目2","b.svg"]};
+var category={"dsjs":["党史军史"],"fdsk":["辅导授课"],"gwth":["感悟体会"],"tjll":["图解理论"],
+"wzts":["文章推送"],"xzdt":["小组动态"],"zyls":["重要论述"],"zxdt":["主席动态"]};
 [].forEach.call(document.getElementsByTagName('a'),function(e){
 	if(category[e.innerText])
-		e.innerHTML="<img src='/"+category[e.innerText][1]+"' /><br>"+category[e.innerText][0]
+		e.innerHTML="<img src='/"+category[e.innerText]+".jpg' /><br>"+category[e.innerText]
 });
 
 </script>
