@@ -23,10 +23,10 @@ var category={"dsjs":["党史军史"],"fdsk":["辅导授课"],"thgw":["体会感
 var i=0;
 [].forEach.call(document.getElementsByTagName('a'),function(e){
 	if(category[e.innerText]){
-		i++
-		if (i=4)
-			e.parentElement.innerHTML+="<br>"
 		e.innerHTML="<img src='/"+category[e.innerText]+".jpg' /><br>"+category[e.innerText]
+		i++
+		if (i==4)
+			e.parentElement.innerHTML+="<br>"
 	}
 });
 
