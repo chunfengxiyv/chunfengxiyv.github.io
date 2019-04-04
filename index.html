@@ -6,14 +6,6 @@ title: {{ site.name }}
 <div id="home">
 {% for category in site.categories %}
 <a href='/categorys.html#{{ category | first }}'>{{ category | first }}</a>
-
-<script type="text/javascript">
-if(document.getElementById("home").children.length==8)
-document.write("<br>")
-</script>
-<!--     {% for post in category.last %}
-        <li>{{ post.date | date: "%Y-%m-%d" }} &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.url | last}}{{ post.title }}</a></li>
-    {% endfor %} -->
 {% endfor %}
 </div><br>
 <ul class="arc-list">
