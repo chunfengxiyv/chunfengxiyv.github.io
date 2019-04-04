@@ -1,6 +1,10 @@
 #home a img{
 	width: 4em;
 }
+
+.page-header {
+    padding: 2rem;
+}
 #home a{
 	text-align: center;
     width: 5em;
