@@ -11,6 +11,7 @@
         font-size: 0.8em;
     display: inline-block;
     color: #000;
+    padding: 1rem;
 }
 .main-content {max-width: none;padding: 2rem 0rem;margin: 0 auto;font-size: 1.1rem;} 
 
