@@ -12,6 +12,6 @@ for(i in category){document.write("<a href='/categorys.html#"+i+"'>"+category[i]
 </div><br>
 <ul class="arc-list">
     {% for post in site.posts %}
-        <li>{{ post.date | date: "%Y-%m-%d" }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.url | last}}{{ post.title }}</a></li>
+        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.url | last}}{{ post.title }}</a></li>
     {% endfor %}
 </ul>
