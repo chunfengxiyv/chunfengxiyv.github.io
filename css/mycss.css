@@ -29,9 +29,8 @@ li{
 }
 .main-content {
   max-width: none;
-  padding: 2rem 0rem;
+  padding: 0rem;
   margin: 0 auto;
-  font-size: 1.1rem;
 }
 
 #home {
