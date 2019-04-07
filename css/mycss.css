@@ -14,6 +14,7 @@ li{
   width: 90%;
   margin: .1em;
   padding: .5em;
+  min-height: 4em;
 }
 #home a {
   text-align: center;
@@ -25,7 +26,6 @@ li{
   background: #fffedd;
   margin: 0.1em;
   
-  min-height: 4em;
 }
 .main-content {
   max-width: none;
