@@ -8,6 +8,13 @@ ul {
 .page-header {
   padding: 1rem;
 }
+li{
+  background-color: #F5F6FA;
+  border: solid 1px #E1E6EB;
+  width: 90%;
+  margin: .1em;
+  padding: .5em;
+}
 #home a {
   text-align: center;
   width: 7em;
