@@ -1,7 +1,9 @@
 #home a img {
   width: 4em;
 }
-
+.arc-list{
+	    padding: 0;
+}
 ul {
   list-style: none;
 }
@@ -9,11 +11,11 @@ ul {
   padding: 0.5rem;
 }
 li{
-  background-color: #F5F6FA;
+  background-color: #FFF;
   border: solid 1px #E1E6EB;
-  width: 90%;
-  margin: .1em;
-  padding: .5em;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   min-height: 4em;
 }
 #home a {
