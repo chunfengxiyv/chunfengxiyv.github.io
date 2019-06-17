@@ -5,7 +5,6 @@ title: { { site.name } }
 
 <div id="home2">
   {% for category in site.categories %}
-
   <div id="{{ category | first }}" style="display: none;">
     <h2>{{ category | first }}</h2>
     {% for post in category.last %}
@@ -40,6 +39,9 @@ title: { { site.name } }
     [].forEach.call(document.getElementsByTagName("a"), function(e) {
       if (e.href.split("#")[1] == key) {
         e.style.background = "#f00";
+      }else{
+          
+        e.style.background = "#000";
       }
     });
   }
