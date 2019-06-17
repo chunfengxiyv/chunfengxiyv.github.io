@@ -1,35 +1,57 @@
 ---
 layout: default
-title: {{ site.name }}
+title: { { site.name } }
 ---
 
 <div id="home2">
-{% for category in site.categories %}
+  {% for category in site.categories %}
 
-<div id="{{ category | first }}" style="display: none;">
-<h2>{{ category | first }}</h2>
+  <div id="{{ category | first }}" style="display: none;">
+    <h2>{{ category | first }}</h2>
     {% for post in category.last %}
-        <li>{{ post.date | date: "%Y-%m-%d" }} &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.url | last}}{{ post.title }}</a></li>
+    <li>
+      {{ post.date | date: "%Y-%m-%d" }} &raquo;
+      <a href="{{ site.baseurl }}{{ post.url }}"
+        >{{ post.url | last }}{{ post.title }}</a
+      >
+    </li>
     {% endfor %}
-
-</div>
-{% endfor %}
+  </div>
+  {% endfor %}
 </div>
 <script type="text/javascript">
-key=document.URL.split("#")[1]
-var category={"dsjs":["党史军史"],"fdsk":["辅导授课"],"thgw":["体会感悟"],"ptbb":["排头兵报"],
-"wzts":["文章推送"],"xzdt":["小组动态"],"zyls":["重要论述"],"zxdt":["主席动态"]};
-[].forEach.call(document.getElementsByTagName('h2'),function(e){
+  key = document.URL.split("#")[1];
+  var category = {
+    dsjs: ["党史军史"],
+    fdsk: ["辅导授课"],
+    thgw: ["体会感悟"],
+    ptbb: ["排头兵报"],
+    wzts: ["文章推送"],
+    xzdt: ["小组动态"],
+    zyls: ["重要论述"],
+    zxdt: ["主席动态"]
+  };
+  [].forEach.call(document.getElementsByTagName("h2"), function(e) {
+    if (category[e.innerText]) e.innerHTML = category[e.innerText];
+  });
 
-
-	if(category[e.innerText])
-		e.innerHTML=category[e.innerText]
-});
-document.getElementById(key).style.display="";
-[].forEach.call(document.getElementsByTagName('a'),function(e){
-	if(e.href.split("#")[1]==key){
-        e.style.background="#f00"
-    }
-
-});
+  document.getElementById(key).style.display = "";
+  function highLight() {
+    [].forEach.call(document.getElementsByTagName("a"), function(e) {
+      if (e.href.split("#")[1] == key) {
+        e.style.background = "#f00";
+      }
+    });
+  }
+  highLight()
+  window.addEventListener(
+    "hashchange",
+    function(e) {
+      key = document.URL.split("#")[1];
+      highLight()
+      document.getElementById(e.oldURL.split("#")[1]).style.display = "none";
+      document.getElementById(e.newURL.split("#")[1]).style.display = "";
+    },
+    false
+  );
 </script>
