@@ -1,29 +1,31 @@
-<div id="home" style="width: 100%;overflow-x: scroll;top: 0;position: fixed;">
+<div id="home" style="width: 100%;top: 0;position: fixed;">
   <section class="page-header">
     春风习语理论学习小组
-  <!--
+    <!--
   <h2 style="font-size: 1rem;margin: 0;" class="project-tagline">
     恪守忠诚，血性担当<br />敢为人先，勇于创新
   </h2> -->
-</section>
-  <div style="width: 900px;">
-    <script type="text/javascript">
-      var category = {
-        all: ["全部内容"],
-        dsjs: ["党史军史"],
-        fdsk: ["辅导授课"],
-        thgw: ["体会感悟"],
-        ptbb: ["排头兵报"],
-        wzts: ["文章推送"],
-        xzdt: ["小组动态"],
-        zyls: ["重要论述"],
-        zxdt: ["主席动态"]
-      };
-      for (i in category) {
-        document.write(
-          "<a href='/categorys.html#" + i + "'>" + category[i] + "</a>"
-        );
-      }
-    </script>
+  </section>
+  <div style="overflow-x: scroll">
+    <div style="width: 900px;">
+      <script type="text/javascript">
+        var category = {
+          all: ["全部内容"],
+          dsjs: ["党史军史"],
+          fdsk: ["辅导授课"],
+          thgw: ["体会感悟"],
+          ptbb: ["排头兵报"],
+          wzts: ["文章推送"],
+          xzdt: ["小组动态"],
+          zyls: ["重要论述"],
+          zxdt: ["主席动态"]
+        };
+        for (i in category) {
+          document.write(
+            "<a href='/categorys.html#" + i + "'>" + category[i] + "</a>"
+          );
+        }
+      </script>
+    </div>
   </div>
 </div>
