@@ -20,12 +20,16 @@ key=document.URL.split("#")[1]
 var category={"dsjs":["党史军史"],"fdsk":["辅导授课"],"thgw":["体会感悟"],"ptbb":["排头兵报"],
 "wzts":["文章推送"],"xzdt":["小组动态"],"zyls":["重要论述"],"zxdt":["主席动态"]};
 [].forEach.call(document.getElementsByTagName('h2'),function(e){
-	if(e.innerText==key){
-        e.style.background="#f00"
-    }
+
 
 	if(category[e.innerText])
 		e.innerHTML=category[e.innerText]
 });
 document.getElementById(key).style.display=""
+[].forEach.call(document.getElementsByTagName('a'),function(e){
+	if(e.href.split("#")[1]==key){
+        e.style.background="#f00"
+    }
+
+});
 </script>
