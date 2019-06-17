@@ -25,7 +25,7 @@ var category={"dsjs":["党史军史"],"fdsk":["辅导授课"],"thgw":["体会感
 	if(category[e.innerText])
 		e.innerHTML=category[e.innerText]
 });
-document.getElementById(key).style.display=""
+document.getElementById(key).style.display="";
 [].forEach.call(document.getElementsByTagName('a'),function(e){
 	if(e.href.split("#")[1]==key){
         e.style.background="#f00"
