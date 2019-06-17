@@ -22,7 +22,7 @@ li{
   text-align: center;
   display: inline-block;
   padding: 0.5rem;
-  
+      background: #fff;
 }
 a {
   color: #000;
