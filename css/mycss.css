@@ -1,22 +1,22 @@
 #home a img {
   width: 4em;
 }
-.arc-list{
-	    padding: 0;
+.arc-list {
+  padding: 0;
 }
 ul {
   list-style: none;
 }
 .page-header {
   padding: 0rem;
-      font-size: 2em;
-      
-    padding-top: 0.5em;
-    padding-bottom: 0.3em;
+  font-size: 2em;
+
+  padding-top: 0.5em;
+  padding-bottom: 0.3em;
 }
-li{
-  background-color: #FFF;
-  border: solid 1px #E1E6EB;
+li {
+  background-color: #fff;
+  border: solid 1px #e1e6eb;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -26,7 +26,7 @@ li{
   text-align: center;
   display: inline-block;
   padding: 0.5rem;
-      background: #fff;
+  background: #fff;
 }
 a {
   color: #000;
@@ -35,7 +35,7 @@ a {
   max-width: none;
   padding: 0rem;
   margin: 0 auto;
-      margin-top: 7em;
+  margin-top: 7em;
 }
 
 .main-content img {
