@@ -33,6 +33,7 @@ title: { { site.name } }
 </div>
 <script type="text/javascript">
   key = document.URL.split("#")[1];
+  if(!key)key="all"
   [].forEach.call(document.getElementsByTagName("h2"), function(e) {
     if (category[e.innerText]) e.innerHTML = category[e.innerText];
   });
