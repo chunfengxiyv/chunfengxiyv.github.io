@@ -12,7 +12,7 @@ title: { { site.name } }
           >{{ post.url | last }}{{ post.title }}</a
         >
         <br />
-        {{ post.date | date: "%Y-%m-%d" }}
+        <p>{{ post.date | date: "%Y-%m-%d" }}</p>
       </li>
       {% endfor %}
     </ul>
