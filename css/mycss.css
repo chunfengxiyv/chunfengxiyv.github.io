@@ -13,6 +13,11 @@ ul {
 
   padding-top: 0.5em;
   padding-bottom: 0.3em;
+
+    background: url(/img/bg.jpg) no-repeat fixed;
+    background-size: contain;
+    filter: brightness(80%);
+        color: yellow;
 }
 li {
   background-color: #fff;
