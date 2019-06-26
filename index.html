@@ -12,7 +12,7 @@ title: { { site.name } }
           >{{ post.url | last }}{{ post.title }}</a
         >
         <br />
-        <p>{{ post.date | date: "%Y-%m-%d" }}</p>
+        <p style="position: relative;top: 1em;margin: 0;">{{ post.date | date: "%Y-%m-%d" }}</p>
       </li>
       {% endfor %}
     </ul>
