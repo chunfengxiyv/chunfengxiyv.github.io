@@ -8,15 +8,12 @@ function Utils(errorOutputId) { // eslint-disable-line no-unused-vars
         script.setAttribute('async', '');
         script.setAttribute('type', 'text/javascript');
         script.addEventListener('load', () => {
-            if (cv.getBuildInformation)
-            {
+            if (cv.getBuildInformation) {
                 console.log(cv.getBuildInformation());
                 onloadCallback();
-            }
-            else
-            {
+            } else {
                 // WASM
-                cv['onRuntimeInitialized']=()=>{
+                cv['onRuntimeInitialized'] = () => {
                     console.log(cv.getBuildInformation());
                     onloadCallback();
                 }
@@ -125,8 +122,9 @@ function Utils(errorOutputId) { // eslint-disable-line no-unused-vars
 
     this.startCamera = function(resolution, callback, videoId) {
         const constraints = {
-            'qvga': {width: {exact: 320}, height: {exact: 240}},
-            'vga': {width: {exact: 640}, height: {exact: 480}}};
+            'qvga': { width: { exact: 320 }, height: { exact: 240 } },
+            'vga': { width: { exact: 640 }, height: { exact: 480 }, facingMode: { exact: "environment" } }
+        };
         let video = document.getElementById(videoId);
         if (!video) {
             video = document.createElement('video');
@@ -137,7 +135,7 @@ function Utils(errorOutputId) { // eslint-disable-line no-unused-vars
             videoConstraint = true;
         }
 
-        navigator.mediaDevices.getUserMedia({video: videoConstraint, audio: false})
+        navigator.mediaDevices.getUserMedia({ video: videoConstraint, audio: false })
             .then(function(stream) {
                 video.srcObject = stream;
                 video.play();
